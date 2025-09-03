@@ -1,0 +1,38 @@
+@use 'variaveis';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: variaveis.$fonte-principal;
+  line-height: 1.6;
+  color: variaveis.$cor-cinza;
+  background: variaveis.$cor-branca;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: #{variaveis.$espaco-md};
+}
+
+.header {
+  background: variaveis.$cor-primaria;
+  color: variaveis.$cor-branca;
+  padding: #{variaveis.$espaco-p} #{variaveis.$espaco-m};
+}
+
+.header__nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__menu {
+  list-style: none;
+  display: flex;
+  gap: #{variaveis.$espaco-md};
+}

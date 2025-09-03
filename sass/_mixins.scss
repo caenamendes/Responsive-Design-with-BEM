@@ -1,0 +1,14 @@
+@mixin botao($bg, $cor) {
+  background: $bg;
+  color: $cor;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@mixin container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: #{variaveis.$espaco-md};
+}

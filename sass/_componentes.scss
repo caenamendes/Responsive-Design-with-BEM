@@ -1,0 +1,88 @@
+@use 'variaveis';
+@use 'mixins';
+
+.header__menu-link {
+  color: variaveis.$cor-branca;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.banner {
+  background: url("/agenciacriativa.jpg") center/cover no-repeat;
+  color: variaveis.$cor-branca;
+  text-align: center;
+  padding: #{variaveis.$espaco-p} #{variaveis.$espaco-m};
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+.section__title {
+  color: variaveis.$cor-primaria;
+  margin-bottom: #{variaveis.$espaco-md};
+  text-align: center;
+}
+
+.servicos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: #{variaveis.$espaco-md};
+}
+
+.servicos__card {
+  background: variaveis.$cor-branca;
+  padding: #{variaveis.$espaco-md};
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.depoimentos {
+  background: #f6c674;
+  border-radius: 8px;
+  padding: #{variaveis.$espaco-md};
+}
+
+.depoimentos__item {
+  margin-bottom: #{variaveis.$espaco-md};
+  font-style: italic;
+  text-align: center;
+}
+
+.contato__form {
+  display: flex;
+  flex-direction: column;
+  gap: #{variaveis.$espaco-md};
+}
+
+.contato__input,
+.contato__textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contato__button {
+  @include mixins.botao(variaveis.$cor-primaria, variaveis.$cor-branca);
+  align-self: center;
+  width: fit-content;
+
+  &:hover {
+    background: variaveis.$cor-secundaria;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: #{variaveis.$espaco-md};
+  background: variaveis.$cor-cinza;
+  color: variaveis.$cor-branca;
+}
